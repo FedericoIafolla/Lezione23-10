@@ -16,9 +16,13 @@ public class OrdineTest {
     @Test
     public void testCalcoloTotale() {
         Pizza pizza = new Pizza("Pizza Hawaiana", Arrays.asList("Prosciutto", "Ananas"), 1024, 6.49, "Media");
+        MenuItem menuItem = new MenuItem(pizza.getName(), pizza.getPrice());
+
         List<MenuItem> elementi = new ArrayList<>();
-        elementi.add(pizza);
+        elementi.add(menuItem);
+
         Ordine ordine = new Ordine(1, "in corso", 4, LocalDateTime.now(), elementi, 0);
+
         double totaleAtteso = pizza.getPrice();
         ordine.setImportoTotale(totaleAtteso);
         assertEquals(totaleAtteso, ordine.getImportoTotale());

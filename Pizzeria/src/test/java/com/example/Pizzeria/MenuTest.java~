@@ -8,7 +8,6 @@ import com.example.Pizzeria.model.Topping;
 import com.example.Pizzeria.model.Drink;
 
 import java.util.ArrayList;
-import java.util.ArraysList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,9 +17,9 @@ public class MenuTest {
     public void testMenu() {
         List<Topping> toppings = new ArrayList<>();
         List<Drink> drinks = new ArrayList<>();
-        List<Pizza> pizza = new ArrayList<>();
+        List<Pizza> pizze = new ArrayList<>();
 
-        Menu menu = new Menu(toppings, drinks, pizza);
+        Menu menu = new Menu(toppings, drinks, pizze);
 
         Pizza pizza = new Pizza("Pizza Margherita", Arrays.asList("Pomodoro", "Mozzarella", "Basilico"), 1104, 4.99, "Media");
         menu.getPizze().add(pizza);
